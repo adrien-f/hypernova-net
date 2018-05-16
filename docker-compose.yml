@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: 
+      context: ./web
+    ports:
+     - "5000:5000"
+    links:
+      - hypernova
+  hypernova:
+    build: 
+      context: ./hypernova
+    ports:
+     - "3000:3000"
