@@ -12,6 +12,23 @@ docker-compose up
 
 Currently it uses a tag helper.
 
+```typescript
+import * as React from "react";
+import {renderReact} from "hypernova-react"
+
+interface HelloWorldProps {
+    from: string;
+}
+
+export class HelloWorldComponent extends React.Component<HelloWorldProps, {}> {
+    render() {
+        return <h1>Hello World, from {this.props.from}!</h1>
+    }
+}
+
+export default renderReact('HelloWorld', HelloWorldComponent);
+```
+
 ```csharp
 services.AddSingleton<IHypernovaClient>(new HypernovaClient(new HypernovaConfig
 {
@@ -20,5 +37,5 @@ services.AddSingleton<IHypernovaClient>(new HypernovaClient(new HypernovaConfig
 ```
 
 ```html
-<hypernova component="HelloWorld" data="@Model.HelloWorldData"></hypernova>
+<hypernova component="HelloWorld" data="@Model.HelloWorldData"/>
 ```
