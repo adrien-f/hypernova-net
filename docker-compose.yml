@@ -7,6 +7,8 @@ services:
      - "5000:5000"
     links:
       - hypernova
+    environment:
+      - APP__HYPERNOVAENDPOINT=http://hypernova:3000
   hypernova:
     build: 
       context: ./hypernova
