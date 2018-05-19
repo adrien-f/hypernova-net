@@ -1,10 +1,13 @@
 import * as React from "react";
 import {renderReact} from "hypernova-react"
 
+interface HelloWorldProps {
+    from: string;
+}
 
-export class HelloWorldComponent extends React.Component<{}, {}> {
+export class HelloWorldComponent extends React.Component<HelloWorldProps, {}> {
     render() {
-        return <h1>Hello World, {(new Date().toISOString())}</h1>
+        return <h1>Hello World, from {this.props.from}!</h1>
     }
 }
 

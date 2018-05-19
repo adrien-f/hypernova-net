@@ -12,8 +12,9 @@ const hypernova_react_1 = require("hypernova-react");
 class HelloWorldComponent extends React.Component {
     render() {
         return React.createElement("h1", null,
-            "Hello World, $",
-            new Date());
+            "Hello World, from ",
+            this.props.from,
+            "!");
     }
 }
 exports.HelloWorldComponent = HelloWorldComponent;

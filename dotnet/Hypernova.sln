@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "web", "Web\web.csproj", "{ABCB1BF2-A7CD-48B5-9093-E114A473AF09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HypernovaNet", "HypernovaNet\HypernovaNet.csproj", "{AF4BEFB4-9AC5-4AC1-A63E-4A58B639C897}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCB1BF2-A7CD-48B5-9093-E114A473AF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCB1BF2-A7CD-48B5-9093-E114A473AF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCB1BF2-A7CD-48B5-9093-E114A473AF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCB1BF2-A7CD-48B5-9093-E114A473AF09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4BEFB4-9AC5-4AC1-A63E-4A58B639C897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4BEFB4-9AC5-4AC1-A63E-4A58B639C897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4BEFB4-9AC5-4AC1-A63E-4A58B639C897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4BEFB4-9AC5-4AC1-A63E-4A58B639C897}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

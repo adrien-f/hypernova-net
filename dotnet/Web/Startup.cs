@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HypernovaNet;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -21,7 +22,12 @@ namespace web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var appSettings = Configuration.GetSection("App").Get<AppSettings>();
             services.AddMvc();
+            services.AddSingleton<IHypernovaClient>(new HypernovaClient(new HypernovaConfig
+            {
+                Endpoint = appSettings.HypernovaEndpoint
+            }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -31,6 +37,7 @@ namespace web
             {
                 app.UseDeveloperExceptionPage();
             }
+            
 
             app.UseStaticFiles();
 
